@@ -1,0 +1,29 @@
+﻿@model string
+@{
+    string resultJson = ViewBag.ResultJson;
+}
+<div class="panel panel-default">
+    <div class="panel-heading">Api</div>
+    <div class="panel-body">
+        <form asp-action="Notify" asp-controller="Home"
+              data-ajax="true"
+              data-ajax-method="POST"
+              data-ajax-mode="replace"
+              data-ajax-update="#ApiTestBlock">
+
+            @Html.Hidden("AccessToken", Model)
+            <textarea name="Message" class="form-control"></textarea>
+            <button type="submit" class="btn btn-primary" style="margin-top:20px;">送出</button>
+        </form>
+    </div>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(resultJson))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">Result</div>
+        <div class="panel-body">
+            <pre>@Html.Raw(resultJson)</pre>
+        </div>
+    </div>
+}

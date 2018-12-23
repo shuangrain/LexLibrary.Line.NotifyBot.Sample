@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string accessToken = ViewBag.AccessToken;
+}
+
+<div class="row">
+    @if (string.IsNullOrWhiteSpace(accessToken))
+    {
+        <div class="col-md-12">
+            <a href="@(ViewBag.ClientAuthorizeUrl)" class="btn btn-primary">點我授權</a>
+        </div>
+    }
+    else
+    {
+        <div class="col-md-12" id="ApiTestBlock">
+            <partial name="Notify" />
+        </div>
+    }
+</div>

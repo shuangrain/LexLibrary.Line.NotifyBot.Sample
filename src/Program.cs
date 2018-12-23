@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace LexLibrary.Line.Login.Sample
+namespace LexLibrary.Line.NotifyBot.Sample
 {
     public class Program
     {

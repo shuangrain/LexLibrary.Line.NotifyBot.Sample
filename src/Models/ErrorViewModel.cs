@@ -1,6 +1,6 @@
 using System;
 
-namespace LexLibrary.Line.Login.Sample.Models
+namespace LexLibrary.Line.NotifyBot.Sample.Models
 {
     public class ErrorViewModel
     {
